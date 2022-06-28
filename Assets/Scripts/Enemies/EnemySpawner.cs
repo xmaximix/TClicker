@@ -17,7 +17,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Collider spawnArea;
 
     private Vector3 spawnPosition;
-    private Quaternion spawnRotation;
 
     private void Start()
     {
@@ -59,9 +58,8 @@ public class EnemySpawner : MonoBehaviour
                 if (random <= enemy.spawnChance)
                 {
                     CalculateRandomPositionInsideSpawnArea();
-                    spawnRotation = Quaternion.Euler(spawnArea.transform.eulerAngles);
 
-                    Instantiate(enemy, spawnPosition, spawnRotation, enemiesHolder.transform);
+                    Instantiate(enemy, spawnPosition, Quaternion.identity, enemiesHolder.transform);
                     EventManager.SendEnemySpawned();
                     break;
                 }

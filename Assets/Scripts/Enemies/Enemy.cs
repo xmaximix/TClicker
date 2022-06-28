@@ -10,6 +10,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] EnemyHealth health;
     [SerializeField] EnemyAnimations animations;
 
+    private void Awake()
+    {
+        movement.SetTransform(transform);
+        movement.SetArena(transform.parent);
+    }
+
     private void Start()
     {
         EventManager.OnDestroBoosterActivated.AddListener(Die);
@@ -21,8 +27,6 @@ public class Enemy : MonoBehaviour
 
         IncreaseStatsOverTime();
 
-        movement.SetTransform(transform);
-        movement.SetArena(transform.parent);
         StartCoroutine(RandomizeMovement());
     }
 
