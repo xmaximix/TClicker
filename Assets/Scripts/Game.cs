@@ -36,6 +36,7 @@ public class Game : MonoBehaviour
         IncreaseKilledEnemies();
         IncreaseRotationSpeed();
     }
+
     private void SaveRecords()
     {
         if (killedEnemies > PlayerPrefs.GetInt(RecordsKeys.maxKillsKey, 0))

@@ -48,6 +48,7 @@ public class GameUI : MonoBehaviour
     {
         StartCoroutine(BoosterCooldownCoroutine(button));
     }
+
     private IEnumerator BoosterCooldownCoroutine(Button button)
     {
         button.interactable = false;

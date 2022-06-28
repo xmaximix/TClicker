@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
     public static UnityEvent OnGameFinished = new UnityEvent();
     public static UnityEvent OnFreezeBoosterActivated = new UnityEvent();
     public static UnityEvent OnDestroBoosterActivated = new UnityEvent();
+
     public static void SendEnemyKilled()
     {
         OnEnemyKilled.Invoke();

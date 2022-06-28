@@ -99,9 +99,9 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(3);
         StartCoroutine(Spawn());
     }
+
     public Enemy[] GetEnemies()
     {
         return enemies;
     }
-
 }
