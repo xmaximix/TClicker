@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyHealth 
 {
     [SerializeField] public int healthPoints;
+
     public void TakeDamage(Enemy enemy, int amount)
     {
         healthPoints -= amount;
